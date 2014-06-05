@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{860D2F93-A461-4430-AB2A-FE3DE9BC557B}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <RootNamespace>System.Cor3.Win</RootNamespace>
+    <AssemblyName>System.Cor3.Windows</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <BaseAddress>4194304</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="System.Cor3\FileUtil.cs" />
+    <Compile Include="System.Cor3\ImageListUtil.cs" />
+    <Compile Include="System.Cor3\Mart.cs" />
+    <Compile Include="System.Cor3\MemoryConverter.cs" />
+    <Compile Include="System.Cor3\Windows\BitmapCompressionMethod.cs" />
+    <Compile Include="System.Cor3\Windows\BITMAPFILEHEADER.cs" />
+    <Compile Include="System.Cor3\Windows\BITMAPINFO.cs" />
+    <Compile Include="System.Cor3\Windows\BITMAPINFOHEADER.cs" />
+    <Compile Include="System.Cor3\Windows\BITMAPV5HEADER.cs" />
+    <Compile Include="System.Cor3\Windows\BmpFileHeader.cs" />
+    <Compile Include="System.Cor3\Windows\BmpInfoHeader.cs" />
+    <Compile Include="System.Cor3\Windows\ClibBoardDummy.cs" />
+    <Compile Include="System.Cor3\Windows\ClipboardDummyNative.cs" />
+    <Compile Include="System.Cor3\Windows\ClipboardFormats.cs" />
+    <Compile Include="System.Cor3\Windows\ClipboardHelperX.cs" />
+    <Compile Include="System.Cor3\Windows\CommonControlMessageConst.cs" />
+    <Compile Include="System.Cor3\Windows\CSIDL.cs" />
+    <Compile Include="System.Cor3\Windows\Custom\CaptureWindow.cs" />
+    <Compile Include="System.Cor3\Windows\Custom\CWPSTRUCT.cs" />
+    <Compile Include="System.Cor3\Windows\Custom\DesktopWindow.cs" />
+    <Compile Include="System.Cor3\Windows\Custom\HookEventArgs.cs" />
+    <Compile Include="System.Cor3\Windows\Custom\HookType.cs" />
+    <Compile Include="System.Cor3\Windows\Custom\ListViewPath.cs" />
+    <Compile Include="System.Cor3\Windows\Custom\LocalWindowsHook.cs" />
+    <Compile Include="System.Cor3\Windows\Custom\ShellContextMenu.cs" />
+    <Compile Include="System.Cor3\Windows\Custom\ShellContextMenuException.cs" />
+    <Compile Include="System.Cor3\Windows\Custom\WM.cs" />
+    <Compile Include="System.Cor3\Windows\Custom\wm_message.cs" />
+    <Compile Include="System.Cor3\Windows\DLLVERSIONINFO.cs" />
+    <Compile Include="System.Cor3\Windows\EC_EM.cs" />
+    <Compile Include="System.Cor3\Windows\EditControlMsg.cs" />
+    <Compile Include="System.Cor3\Windows\efx.simpletype.defs.cs" />
+    <Compile Include="System.Cor3\Windows\FF_PITCHANDFAMILY.cs" />
+    <Compile Include="System.Cor3\Windows\FILEDESCRIPTORW.cs" />
+    <Compile Include="System.Cor3\Windows\FILEGROUPDESCRIPTORW.cs" />
+    <Compile Include="System.Cor3\Windows\FontCharSet.cs" />
+    <Compile Include="System.Cor3\Windows\FontClipPrecision.cs" />
+    <Compile Include="System.Cor3\Windows\FontPitchAndFamily.cs" />
+    <Compile Include="System.Cor3\Windows\FontPrecision.cs" />
+    <Compile Include="System.Cor3\Windows\FontQuality.cs" />
+    <Compile Include="System.Cor3\Windows\FontWeight.cs" />
+    <Compile Include="System.Cor3\Windows\font_util.cs" />
+    <Compile Include="System.Cor3\Windows\FormatMessgageConsts.cs" />
+    <Compile Include="System.Cor3\Windows\Gdi32.cs" />
+    <Compile Include="System.Cor3\Windows\IClibBoardDummy.cs" />
+    <Compile Include="System.Cor3\Windows\ILM.cs" />
+    <Compile Include="System.Cor3\Windows\ILockBytes.cs" />
+    <Compile Include="System.Cor3\Windows\InitCommonControlsExConst.cs" />
+    <Compile Include="System.Cor3\Windows\IStorage.cs" />
+    <Compile Include="System.Cor3\Windows\Kernel32.cs" />
+    <Compile Include="System.Cor3\Windows\ListViewMessages.cs" />
+    <Compile Include="System.Cor3\Windows\LOGFONT.cs" />
+    <Compile Include="System.Cor3\Windows\LongColorScheme.cs" />
+    <Compile Include="System.Cor3\Windows\LPWALLPAPEROPT.cs" />
+    <Compile Include="System.Cor3\Windows\LVSIL.cs" />
+    <Compile Include="System.Cor3\Windows\MakeDir.cs" />
+    <Compile Include="System.Cor3\Windows\Mart.cs" />
+    <Compile Include="System.Cor3\Windows\MemoryConverter.cs" />
+    <Compile Include="System.Cor3\Windows\MENUITEMINFO.cs" />
+    <Compile Include="System.Cor3\Windows\MFS.cs" />
+    <Compile Include="System.Cor3\Windows\MFT.cs" />
+    <Compile Include="System.Cor3\Windows\MIIM.cs" />
+    <Compile Include="System.Cor3\Windows\MyClass.cs" />
+    <Compile Include="System.Cor3\Windows\ole32.cs" />
+    <Compile Include="System.Cor3\Windows\POINT.cs" />
+    <Compile Include="System.Cor3\Windows\POINTL.cs" />
+    <Compile Include="System.Cor3\Windows\REBARANDINFO.cs" />
+    <Compile Include="System.Cor3\Windows\RECT.cs" />
+    <Compile Include="System.Cor3\Windows\Resources\ACCELTABLEENTRY.cs" />
+    <Compile Include="System.Cor3\Windows\Resources\CURSORDIR.cs" />
+    <Compile Include="System.Cor3\Windows\Resources\CURSORSHAPE.cs" />
+    <Compile Include="System.Cor3\Windows\Resources\DIRENTRY.cs" />
+    <Compile Include="System.Cor3\Windows\Resources\FONTDIRENTRY.cs" />
+    <Compile Include="System.Cor3\Windows\Resources\FONTGROUPHDR.cs" />
+    <Compile Include="System.Cor3\Windows\Resources\ICONRESDIR.cs" />
+    <Compile Include="System.Cor3\Windows\Resources\LOCALHEADER.cs" />
+    <Compile Include="System.Cor3\Windows\Resources\MENUHEADER.cs" />
+    <Compile Include="System.Cor3\Windows\Resources\MENUHELPID.cs" />
+    <Compile Include="System.Cor3\Windows\Resources\MESSAGE_RESOURCE_BLOCK.cs" />
+    <Compile Include="System.Cor3\Windows\Resources\MESSAGE_RESOURCE_DATA.cs" />
+    <Compile Include="System.Cor3\Windows\Resources\MESSAGE_RESOURCE_ENTRY.cs" />
+    <Compile Include="System.Cor3\Windows\Resources\NameOrOrdinal.cs" />
+    <Compile Include="System.Cor3\Windows\Resources\NEWHEADER.cs" />
+    <Compile Include="System.Cor3\Windows\Resources\NORMALMENUITEM.cs" />
+    <Compile Include="System.Cor3\Windows\Resources\POPUPMENUITEM.cs" />
+    <Compile Include="System.Cor3\Windows\Resources\RC_ENUM.cs" />
+    <Compile Include="System.Cor3\Windows\Resources\RESDIR.cs" />
+    <Compile Include="System.Cor3\Windows\Resources\RESINFO.cs" />
+    <Compile Include="System.Cor3\Windows\Resources\RESOURCEHEADER.cs" />
+    <Compile Include="System.Cor3\Windows\Resources\RESOURCE_ENUM.cs" />
+    <Compile Include="System.Cor3\Windows\Resources\SString.cs" />
+    <Compile Include="System.Cor3\Windows\Resources\StringFileInfo.cs" />
+    <Compile Include="System.Cor3\Windows\Resources\StringTable.cs" />
+    <Compile Include="System.Cor3\Windows\Resources\Var.cs" />
+    <Compile Include="System.Cor3\Windows\Resources\VarFileInfo.cs" />
+    <Compile Include="System.Cor3\Windows\Resources\VS_FIXEDFILEINFO.cs" />
+    <Compile Include="System.Cor3\Windows\Resources\VS_VERSIONINFO.cs" />
+    <Compile Include="System.Cor3\Windows\RGBQUAD.cs" />
+    <Compile Include="System.Cor3\Windows\Shell.cs" />
+    <Compile Include="System.Cor3\Windows\Shell.MenuItem.cs" />
+    <Compile Include="System.Cor3\Windows\Shell.SHFileInfo.cs" />
+    <Compile Include="System.Cor3\Windows\Shell.SHFileInfo.SHGFI.cs" />
+    <Compile Include="System.Cor3\Windows\ShellDesktopBand.cs" />
+    <Compile Include="System.Cor3\Windows\ShID3.cs" />
+    <Compile Include="System.Cor3\Windows\ShowWindowStyles.cs" />
+    <Compile Include="System.Cor3\Windows\sh_folder.cs" />
+    <Compile Include="System.Cor3\Windows\SIZEL.cs" />
+    <Compile Include="System.Cor3\Windows\stuff.cs" />
+    <Compile Include="System.Cor3\Windows\TPM.cs" />
+    <Compile Include="System.Cor3\Windows\TVM.cs" />
+    <Compile Include="System.Cor3\Windows\TVSIL.cs" />
+    <Compile Include="System.Cor3\Windows\TypeLib\apple\Apple.QTOControlLib.cs" />
+    <Compile Include="System.Cor3\Windows\TypeLib\apple\Apple.QTOLibrary.cs" />
+    <Compile Include="System.Cor3\Windows\TypeLib\CMF.cs" />
+    <Compile Include="System.Cor3\Windows\TypeLib\CMIC.cs" />
+    <Compile Include="System.Cor3\Windows\TypeLib\CMINVOKECOMMANDINFOEX.cs" />
+    <Compile Include="System.Cor3\Windows\TypeLib\GCS.cs" />
+    <Compile Include="System.Cor3\Windows\TypeLib\IContextMenu.cs" />
+    <Compile Include="System.Cor3\Windows\TypeLib\IContextMenu2.cs" />
+    <Compile Include="System.Cor3\Windows\TypeLib\IContextMenu3.cs" />
+    <Compile Include="System.Cor3\Windows\TypeLib\Interop.AxShockwaveFlashObjects.cs" />
+    <Compile Include="System.Cor3\Windows\TypeLib\Interop.QuartzTypeLib.cs" />
+    <Compile Include="System.Cor3\Windows\TypeLib\Interop.Shell32.cs" />
+    <Compile Include="System.Cor3\Windows\TypeLib\Interop.ShockwaveFlashObjects.cs" />
+    <Compile Include="System.Cor3\Windows\TypeLib\Interop.stdole.cs" />
+    <Compile Include="System.Cor3\Windows\TypeLib\IShellFolder.cs" />
+    <Compile Include="System.Cor3\Windows\TypeLib\SFGAO.cs" />
+    <Compile Include="System.Cor3\Windows\TypeLib\SHCONTF.cs" />
+    <Compile Include="System.Cor3\Windows\TypeLib\SHGNO.cs" />
+    <Compile Include="System.Cor3\Windows\TypeLib\STGMEDIUM.cs" />
+    <Compile Include="System.Cor3\Windows\TypeLib\SW.cs" />
+    <Compile Include="System.Cor3\Windows\TypeLib\TYMED.cs" />
+    <Compile Include="System.Cor3\Windows\User32.cs" />
+    <Compile Include="System.Cor3\Windows\UserControlMessage.cs" />
+    <Compile Include="System.Cor3\Windows\UUID.cs" />
+    <Compile Include="System.Cor3\Windows\w32.cs" />
+    <Compile Include="System.Cor3\Windows\w32.SimpleTypes.cs" />
+    <Compile Include="System.Cor3\Windows\w32_const.cs" />
+    <Compile Include="System.Cor3\Windows\Win.SimpleTypes.cs" />
+    <Compile Include="System.Cor3\Windows\WindowFlags.cs" />
+    <Compile Include="System.Cor3\Windows\WindowPos.cs" />
+    <Compile Include="System.Cor3\Windows\WindowStyle.cs" />
+    <Compile Include="System.Cor3\Windows\WindowStyles.cs" />
+    <Compile Include="System.Cor3\Windows\WindowStylesExtended.cs" />
+    <Compile Include="System.Cor3\Windows\wm_events.cs" />
+    <Compile Include="System.Cor3\Windows\WM_MSG.cs" />
+    <Compile Include="System.Cor3\Windows\WNDCLASSEX.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="System.Cor3" />
+    <Folder Include="System.Cor3\Windows" />
+    <Folder Include="System.Cor3\Windows\Custom" />
+    <Folder Include="System.Cor3\Windows\Resources" />
+    <Folder Include="System.Cor3\Windows\TypeLib" />
+    <Folder Include="System.Cor3\Windows\TypeLib\apple" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
