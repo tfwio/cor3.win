@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{0C6AC21B-D2DB-439C-85DE-A8F116EE7437}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Windows.CommonControls</RootNamespace>
+    <AssemblyName>Windows.CommonControls.Interop</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <NoWin32Manifest>False</NoWin32Manifest>
+    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <BaseAddress>4194304</BaseAddress>
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <FileAlignment>4096</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\cor3.core\Properties\GAsm.cs">
+      <Link>Properties\GAsm.cs</Link>
+    </Compile>
+    <Compile Include="..\Cor3.Forms\Forms\WinTheme.cs">
+      <Link>WinTheme.cs</Link>
+    </Compile>
+    <Compile Include="..\Cor3.Fx\w32\ClipboardFormats.cs">
+      <Link>Microsoft.Windows\ClipboardFormats.cs</Link>
+      <DependentUpon>Shell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\Cor3.Fx\w32\CSIDL.cs">
+      <Link>Microsoft.Windows\CSIDL.cs</Link>
+      <DependentUpon>Shell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\Cor3.Fx\w32\Custom\HookType.cs">
+      <Link>Microsoft.Windows\HookType.cs</Link>
+      <DependentUpon>User32.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\Cor3.Fx\w32\Custom\wm_message.cs">
+      <Link>Microsoft.Windows\wm_message.cs</Link>
+    </Compile>
+    <Compile Include="..\Cor3.Fx\w32\Shell.cs">
+      <Link>Microsoft.Windows\Shell.cs</Link>
+    </Compile>
+    <Compile Include="..\Cor3.Fx\w32\Shell.SHFileInfo.cs">
+      <Link>Microsoft.Windows\Shell.SHFileInfo.cs</Link>
+      <DependentUpon>Shell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\Cor3.Fx\w32\Shell.SHFileInfo.SHGFI.cs">
+      <Link>Microsoft.Windows\Shell.SHFileInfo.SHGFI.cs</Link>
+      <DependentUpon>Shell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\Cor3.Fx\w32\User32.cs">
+      <Link>Microsoft.Windows\User32.cs</Link>
+    </Compile>
+    <Compile Include="..\Cor3.Fx\w32\w32.controls\CommonControlMessageConst.cs">
+      <Link>Microsoft.Windows\CommonControlMessageConst.cs</Link>
+      <DependentUpon>User32.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\Cor3.Fx\w32\w32.controls\ILM.cs">
+      <Link>Microsoft.Windows\ILM.cs</Link>
+    </Compile>
+    <Compile Include="..\Cor3.Fx\w32\w32.controls\ListViewMessages.cs">
+      <Link>Microsoft.Windows\ListViewMessages.cs</Link>
+    </Compile>
+    <Compile Include="..\Cor3.Fx\w32\w32.controls\LVSIL.cs">
+      <Link>Microsoft.Windows\LVSIL.cs</Link>
+    </Compile>
+    <Compile Include="..\Cor3.Fx\w32\w32.controls\TVM.cs">
+      <Link>Microsoft.Windows\TVM.cs</Link>
+      <DependentUpon>User32.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\Cor3.Fx\w32\w32.controls\TVSIL.cs">
+      <Link>Microsoft.Windows\TVSIL.cs</Link>
+      <DependentUpon>User32.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\Cor3.Fx\w32\w32.cs">
+      <Link>Microsoft.Windows\w32.cs</Link>
+    </Compile>
+    <Compile Include="..\Cor3.Fx\w32\w32.enum\stuff.cs">
+      <Link>Microsoft.Windows\stuff.cs</Link>
+    </Compile>
+    <Compile Include="..\Cor3.Fx\w32\w32.enum\TPM.cs">
+      <Link>Microsoft.Windows\TPM.cs</Link>
+      <DependentUpon>User32.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\Cor3.Fx\w32\w32.enum\WindowFlags.cs">
+      <Link>Microsoft.Windows\WindowFlags.cs</Link>
+    </Compile>
+    <Compile Include="..\Cor3.Fx\w32\w32.enum\WindowStyle.cs">
+      <Link>Microsoft.Windows\WindowStyle.cs</Link>
+    </Compile>
+    <Compile Include="..\Cor3.Fx\w32\w32.gdi\Gdi32.cs">
+      <Link>Microsoft.Windows\Gdi32.cs</Link>
+    </Compile>
+    <Compile Include="..\Cor3.Fx\w32\w32.types\DLLVERSIONINFO.cs">
+      <Link>Microsoft.Windows\DLLVERSIONINFO.cs</Link>
+    </Compile>
+    <Compile Include="..\Cor3.Fx\w32\w32.types\POINTL.cs">
+      <Link>Microsoft.Windows\POINTL.cs</Link>
+    </Compile>
+    <Compile Include="..\Cor3.Fx\w32\w32.types\RECT.cs">
+      <Link>Microsoft.Windows\RECT.cs</Link>
+    </Compile>
+    <Compile Include="..\Cor3.Fx\w32\w32.types\SIZEL.cs">
+      <Link>Microsoft.Windows\SIZEL.cs</Link>
+    </Compile>
+    <Compile Include="..\Cor3.Fx\w32\w32.types\WNDCLASSEX.cs">
+      <Link>Microsoft.Windows\WNDCLASSEX.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CsShell.cs" />
+    <Compile Include="doProcess.cs" />
+    <Compile Include="CsShellFile_ListItem.cs">
+      <DependentUpon>CsShellManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CsShellDirectory.cs">
+      <DependentUpon>CsShellManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CsShellManager.cs" />
+    <Compile Include="CsShell-Obsolete.cs">
+      <DependentUpon>CsShellManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CsShellIconPathMap.cs">
+      <DependentUpon>CsShellManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo-Windows.CommonControls.Interop.cs" />
+    <Compile Include="CsShellFileView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CsShellFileView.resx">
+      <DependentUpon>CsShellFileView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
