@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace System
+namespace System.Kernel
 {
-	partial class Kernel : WindowsInterop
+	partial class Kernel32 : WindowsInterop
 	{
 		//./////////////////////////////////////////////////////////////////////////
 		public class ResourceEnum
